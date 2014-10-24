@@ -54,6 +54,7 @@ form {
 .leaderboard-container {
   margin-left: 10%;
   margin-right: 10%;
+
 }
 
 td, th {
@@ -61,9 +62,49 @@ td, th {
   padding: 5px;
 }
 
+th {
+  font-size: 20px;
+}
+
 
 p.header {
   color: #8B0000;
+}
+
+
+/*Pitch your idea css*/
+#movie_idea_synopsis {
+  width: 500px;
+  height: 100px;
+}
+
+#movie_idea_more_info {
+  width: 500px;
+  height: 300px;
+}
+
+p.under-synopsis {
+  font-size: 15px;
+  text-align: left;
+}
+
+/*Details/More Info css*/
+p.details-synopsis {
+  font-size: 20px;
+}
+
+p.details-moreInfo {
+  font-size: 20px;
+}
+
+form.back-btn {
+  margin-top: 10px;
+  padding-left: 0;
+  float: left;
+}
+
+#back-btn {
+  width: 100%;
 }
 
 

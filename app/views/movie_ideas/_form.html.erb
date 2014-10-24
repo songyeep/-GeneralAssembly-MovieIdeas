@@ -11,14 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="synopsis-field">
     <%= f.label :synopsis %><br>
     <%= f.text_field :synopsis %>
+      <p class="under-synopsis">150 Characters remaining</p>
   </div>
-  <div class="field">
+  <div class="moreInfo-field">
     <%= f.label :more_info %><br>
     <%= f.text_field :more_info %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
