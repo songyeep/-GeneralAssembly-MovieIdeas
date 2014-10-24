@@ -1,0 +1,27 @@
+<h1>Leaderboard</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Synopsis</th>
+      <th>More info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movie_ideas.each do |movie_idea| %>
+      <tr>
+        <td><%= movie_idea.synopsis %></td>
+        <td><%= movie_idea.more_info %></td>
+        <!-- <td><%= link_to 'Show', movie_idea %></td>
+        <td><%= link_to 'Edit', edit_movie_idea_path(movie_idea) %></td>
+        <td><%= link_to 'Destroy', movie_idea, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movie idea', new_movie_idea_path %>

@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Brown Fox";
+  src: url("/Prototype.ttf") format('truetype');
+}
+
+body {
+  font-family: "Brown Fox";
+  /*background-color: #342B38;*/
+}
+
+p {
+  font-size: 30px;
+}
+
+nav, form {
+  font-size: 20px;
+}
+
+form {
+  padding: 20px;
+  width: 300px;
+}
+
+
+.container {
+  width: 600px;
+}
+
+.synopsis {
+  background-color: rgba(255,255,255,0.5);
+  height: 400px;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.btn-group {
+  width: 100%;
+}
+
+#nay_btn, #yay_btn {
+  font-size: 30px;
+  height: 50px;
+}
+
+#readMore_btn {
+  font-size: 30px;
+  height: 50px;
+}
+
+
