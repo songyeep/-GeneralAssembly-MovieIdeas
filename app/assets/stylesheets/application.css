@@ -4,6 +4,11 @@
 }
 
 body {
+  /*background: url(/assets/background11.jpg) no-repeat center center fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: "Brown Fox";
   /*background-color: #342B38;*/
 }
@@ -52,6 +57,7 @@ form {
 
 /*Leaderboard css*/
 .leaderboard-container {
+  background-color: rgba(227,227,227,0.5);
   margin-left: 10%;
   margin-right: 10%;
 
@@ -74,11 +80,13 @@ p.header {
 
 /*Pitch your idea css*/
 #movie_idea_synopsis {
+  background-color: rgba(227,227,227,0.5);
   width: 500px;
   height: 100px;
 }
 
 #movie_idea_more_info {
+  background-color: rgba(227,227,227,0.5);
   width: 500px;
   height: 300px;
 }
