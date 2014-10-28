@@ -2,10 +2,11 @@
 
 <h1>Leaderboard</h1>
 
-  <table>
+  <table id="leaderboard">
     <thead>
       <tr>
-        <th>Yay/Nay</th>
+        <th>Yay</th>
+        <th>Nay</th>
         <th>Synopsis</th>
         <!-- <th>More information</th> -->
 
@@ -16,7 +17,8 @@
     <tbody>
       <% @movie_ideas.each do |movie_idea| %>
         <tr>
-          <td><%= movie_idea.get_likes.size %>/<%= movie_idea.get_dislikes.size %></td>
+          <td><%= movie_idea.get_likes.size %></td>
+          <td><%= movie_idea.get_dislikes.size %></td>
           <td><a href="/movie_ideas/<%= movie_idea.id %>"><%= movie_idea.synopsis %></a></td>
           <!-- <td><%= movie_idea.more_info %></td> -->
           <!-- <td><%= link_to 'Show', movie_idea %></td>
@@ -31,3 +33,4 @@
 
   <%= link_to 'New Movie idea', new_movie_idea_path %>
 </div>
+

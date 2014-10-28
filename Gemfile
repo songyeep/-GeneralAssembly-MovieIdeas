@@ -7,6 +7,8 @@ gem 'rails', '4.1.6'
 gem 'sqlite3'
 
 gem 'carrierwave'
+
+gem 'jquery-datatables-rails', '~> 2.2.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

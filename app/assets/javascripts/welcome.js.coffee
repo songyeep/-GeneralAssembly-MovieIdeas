@@ -2,6 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
-  $("body").hide()
-  $("body").fadeIn(1000)
+# $ ->
+#   $("body").hide()
+#   $("body").fadeIn(1000)
+

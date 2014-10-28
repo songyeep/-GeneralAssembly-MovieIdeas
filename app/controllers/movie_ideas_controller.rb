@@ -12,7 +12,7 @@ class MovieIdeasController < ApplicationController
     @movie.liked_by current_user
 
     redirect_to '/'
-    flash[:info] = "Yay, you like this idea!"
+    flash[:notice] = "Yay, you like this idea!"
   end
 
   def dislike
@@ -20,7 +20,7 @@ class MovieIdeasController < ApplicationController
     @movie.downvote_from current_user
 
     redirect_to '/'
-    flash[:info] = "Nay, you hate this idea!"
+    flash[:notice] = "Nay, you hate this idea!"
   end
 
   # GET /movie_ideas/1

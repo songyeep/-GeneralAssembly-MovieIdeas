@@ -1,3 +1,8 @@
+/* ...
+*= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+*/
+
+
 @font-face {
   font-family: "Brown Fox";
   src: url("/Prototype.ttf") format('truetype');
@@ -21,9 +26,9 @@ nav, form {
   font-size: 20px;
 }
 
-form {
-  padding: 20px;
-  width: 300px;
+div.form-group {
+  padding: 8px;
+  width: 250px;
 }
 
 
@@ -82,13 +87,13 @@ p.header {
 #movie_idea_synopsis {
   background-color: rgba(227,227,227,0.5);
   width: 500px;
-  height: 100px;
+  /*height: 100px;*/
 }
 
 #movie_idea_more_info {
   background-color: rgba(227,227,227,0.5);
   width: 500px;
-  height: 300px;
+/*  height: 300px;*/
 }
 
 p.under-synopsis {
@@ -114,7 +119,4 @@ form.back-btn {
 #back-btn {
   width: 100%;
 }
-
-
-
 
