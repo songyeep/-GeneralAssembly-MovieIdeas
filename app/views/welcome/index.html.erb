@@ -26,11 +26,4 @@
 
     </div>
   </div>
-
 </div>
-<% if user_signed_in? %>
-  <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-<% end %>
-<!--
-<p>Likes: <%= @info.get_likes.size %></p>
-<p>Dislikes: <%= @info.get_dislikes.size %></p> -->
