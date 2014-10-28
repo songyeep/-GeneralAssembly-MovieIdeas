@@ -1,32 +1,36 @@
 
-<head>
-  <meta charset="utf-8">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-</head>
+<div class="container">
 
-
-
-<body>
-  <div class="container">
-
-    <div class="synopsis">
-      <p>"synopsis goes here"</p>
-    </div>
-
-    <div class="judgment">
-      <div class="btn-group btn-group-justified">
-        <div class="btn-group">
-          <button type="button" class="btn btn-default" id="nay_btn">Nay</button>
-        </div>
-        <div class="btn-group">
-          <a href="/movie_ideas/" class="btn btn-default" id="readMore_btn">Read More</a>
-        </div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-default" id="yay_btn">Yay</button>
-        </div>
-      </div>
-    </div>
-
+  <div class="synopsis">
+    <p><%= @info.synopsis %></p>
   </div>
-</body>
 
+  <div class="judgment">
+    <div class="btn-group btn-group-justified">
+
+      <div class="btn-group">
+        <form action="/movie_ideas/<%= @info.id %>/dislike" method="post">
+          <button type="submit" class="btn btn-default" id="nay_btn">Nay</button>
+        </form>
+      </div>
+
+      <div class="btn-group">
+        <a href="/movie_ideas/<%= @info.id %>" class="btn btn-default" id="readMore_btn">Read More</a>
+      </div>
+
+      <div class="btn-group">
+        <form action="/movie_ideas/<%= @info.id %>/like" method="post">
+          <button type="submit" class="btn btn-default" id="yay_btn">Yay</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<% if user_signed_in? %>
+  <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+<% end %>
+
+<p>Number of Likes:<%= @info.get_likes.size %></p>
+<p>Number of Dislikes:<%= @info.get_dislikes.size %></p>

@@ -5,8 +5,9 @@
   <table>
     <thead>
       <tr>
+        <th>Yay/Nay</th>
         <th>Synopsis</th>
-        <th>More information</th>
+        <!-- <th>More information</th> -->
 
 
       </tr>
@@ -15,8 +16,9 @@
     <tbody>
       <% @movie_ideas.each do |movie_idea| %>
         <tr>
-          <td><%= movie_idea.synopsis %></td>
-          <td><%= movie_idea.more_info %></td>
+          <td><%= movie_idea.get_likes.size %>/<%= movie_idea.get_dislikes.size %></td>
+          <td><a href="/movie_ideas/<%= movie_idea.id %>"><%= movie_idea.synopsis %></a></td>
+          <!-- <td><%= movie_idea.more_info %></td> -->
           <!-- <td><%= link_to 'Show', movie_idea %></td>
           <td><%= link_to 'Edit', edit_movie_idea_path(movie_idea) %></td>
           <td><%= link_to 'Destroy', movie_idea, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->

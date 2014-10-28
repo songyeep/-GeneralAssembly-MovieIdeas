@@ -7,9 +7,26 @@ class MovieIdeasController < ApplicationController
     @movie_ideas = MovieIdea.all
   end
 
+  def like
+    @movie = MovieIdea.find params[:id]
+    @movie.liked_by current_user
+
+    redirect_to '/'
+    flash[:info] = "Yay, you like this idea!"
+  end
+
+  def dislike
+    @movie = MovieIdea.find params[:id]
+    @movie.downvote_from current_user
+
+    redirect_to '/'
+    flash[:info] = "Nay, you hate this idea!"
+  end
+
   # GET /movie_ideas/1
   # GET /movie_ideas/1.json
   def show
+
   end
 
   # GET /movie_ideas/new

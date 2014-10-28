@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :movie_ideas
 
+  post '/movie_ideas/:id/like' => 'movie_ideas#like'
+
+  post '/movie_ideas/:id/dislike' => 'movie_ideas#dislike'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
