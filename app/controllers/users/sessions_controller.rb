@@ -1,8 +1,11 @@
 class Users::SessionsController < Devise::SessionsController
 # before_filter :configure_sign_in_params, only: [:create]
-  def index
+
+  def profile
+    @user = User.find params[:id]
 
   end
+
 
   # GET /resource/sign_in
   # def new

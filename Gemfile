@@ -6,8 +6,9 @@ gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# Uploader
 gem 'carrierwave'
-
+# Database, sorting
 gem 'jquery-datatables-rails', '~> 2.2.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

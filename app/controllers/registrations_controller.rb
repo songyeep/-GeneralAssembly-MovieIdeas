@@ -1,6 +1,11 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-# before_filter :configure_sign_up_params, only: [:create]
-# before_filter :configure_account_update_params, only: [:update]
+  # before_filter :configure_sign_up_params, only: [:create]
+  # before_filter :configure_account_update_params, only: [:update]
+
+  def profile
+    @user = User.find params[:id]
+  end
+
   # GET /resource/sign_up
   # def new
   #   super
@@ -11,8 +16,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+  # GET /resource/edit
+  # def edit
+  #   super
+  # end
+
   # PUT /resource
-  def update
+  def edit
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: "Your account has been updated successfully." }
@@ -23,6 +33,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       end
     end
   end
+
 
   # DELETE /resource
   # def destroy
@@ -38,13 +49,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+  # protected
+
   private
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:first_name, :profile_pic)
+
+    def sign_up_params
+      params.require(:user).permit(:username, :first_name, :email, :password, :password_confirmation)
     end
 
-  # protected
+    def account_update_params
+      params.require(:user).permit(:username, :first_name, :email, :password, :password_confirmation, :current_password, :profile_pic)
+    end
+
 
   # You can put the params you want to permit in the empty array.
   # def configure_sign_up_params

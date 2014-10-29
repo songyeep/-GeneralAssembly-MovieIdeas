@@ -1,3 +1,4 @@
+
 class MovieIdeasController < ApplicationController
   before_action :set_movie_idea, only: [:show, :edit, :update, :destroy]
 

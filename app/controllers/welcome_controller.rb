@@ -1,9 +1,9 @@
 class WelcomeController < ApplicationController
   def index
-    @info = MovieIdea.all.sample
-  end
-
-  def show
-
+    if params[:id]
+      @info = MovieIdea.find params[:id]
+    else
+      @info = MovieIdea.all.sample
+    end
   end
 end

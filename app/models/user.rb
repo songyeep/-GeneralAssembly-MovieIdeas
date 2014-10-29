@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   acts_as_voter
   has_many :movie_ideas
 
+
+  mount_uploader :profile_pic, PictureUploader
+
 end

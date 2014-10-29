@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations" }
+  devise_scope :user do
+    get '/users/:id' => 'users/sessions#profile'
+  end
+
   resources :movie_ideas
+  resources :users
+
+
 
   post '/movie_ideas/:id/like' => 'movie_ideas#like'
 
@@ -17,7 +25,7 @@ Rails.application.routes.draw do
 
   get 'leaderboard/' => 'movie_ideas#index'
 
-  get '/users/:id' => 'welcome#show'
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
