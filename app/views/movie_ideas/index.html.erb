@@ -20,17 +20,11 @@
           <td><%= movie_idea.get_dislikes.size %></td>
           <td><a href="/movie_ideas/<%= movie_idea.id %>"><%= movie_idea.synopsis %></a></td>
 
-          <!-- <td><%= movie_idea.more_info %></td> -->
-          <!-- <td><%= link_to 'Show', movie_idea %></td>
-          <td><%= link_to 'Edit', edit_movie_idea_path(movie_idea) %></td>
-          <td><%= link_to 'Destroy', movie_idea, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+          <!-- <td><%= link_to 'Destroy', movie_idea, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
         </tr>
       <% end %>
     </tbody>
   </table>
 
-  <br>
-
-  <%= link_to 'New Movie idea', new_movie_idea_path %>
 </div>
 

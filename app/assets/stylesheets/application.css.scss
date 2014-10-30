@@ -5,11 +5,16 @@
 
 @font-face {
   font-family: "Brown Fox";
-  src: url("/Prototype.ttf") format('truetype');
+  src: url("/BebasNeue-webfont.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Bitter";
+  src: url("/Blackout-Midnight.ttf") format('truetype');
 }
 
 body {
-  /*background: url(/assets/background11.jpg) no-repeat center center fixed;*/
+  /*background: url(/hiroshi.jpg) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -18,12 +23,16 @@ body {
 
 }
 
-p {
-  font-size: 30px;
+p, a {
+  font-size: 25px;
 }
 
 nav, form {
   font-size: 20px;
+}
+
+a.navbar-brand {
+  font-size: 30px;
 }
 
 div.form-group {
@@ -34,15 +43,17 @@ div.form-group {
 
 .container {
   width: 1000px;
+  margin-top: 5%;
 }
 
 .synopsis {
   background-color: rgba(227,227,227,0.5);
-  height: 400px;
   padding-top: 15%;
   padding-bottom: 15%;
   padding-left: 10%;
   padding-right: 10%;
+  height: 400px;
+
 }
 
 .btn-group {
@@ -59,14 +70,21 @@ div.form-group {
   height: 50px;
 }
 
+.user_info {
+  text-align: left;
+}
+
+.profile_ideas {
+  text-align: left;
+}
 
 
 /*Leaderboard css*/
 .leaderboard-container {
-  background-color: rgba(227,227,227,0.5);
-  margin-left: 10%;
-  margin-right: 10%;
 
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 25px;
 }
 
 td, th {
@@ -97,18 +115,15 @@ p.header {
 /*  height: 300px;*/
 }
 
-p.under-synopsis {
-  font-size: 15px;
-  text-align: left;
-}
+
 
 /*Details/More Info css*/
 p.details-synopsis {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 p.details-moreInfo {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 form.back-btn {
