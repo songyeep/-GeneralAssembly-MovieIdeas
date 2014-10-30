@@ -27,7 +27,6 @@ class MovieIdeasController < ApplicationController
   # GET /movie_ideas/1
   # GET /movie_ideas/1.json
   def show
-
   end
 
   # GET /movie_ideas/new
@@ -87,6 +86,6 @@ class MovieIdeasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_idea_params
-      params.require(:movie_idea).permit(:synopsis, :more_info)
+      params.require(:movie_idea).permit(:synopsis, :more_info, :user_id)
     end
 end

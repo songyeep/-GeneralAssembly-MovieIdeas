@@ -8,7 +8,6 @@
         <th>Yay</th>
         <th>Nay</th>
         <th>Synopsis</th>
-        <!-- <th>More information</th> -->
 
 
       </tr>
@@ -20,6 +19,7 @@
           <td><%= movie_idea.get_likes.size %></td>
           <td><%= movie_idea.get_dislikes.size %></td>
           <td><a href="/movie_ideas/<%= movie_idea.id %>"><%= movie_idea.synopsis %></a></td>
+
           <!-- <td><%= movie_idea.more_info %></td> -->
           <!-- <td><%= link_to 'Show', movie_idea %></td>
           <td><%= link_to 'Edit', edit_movie_idea_path(movie_idea) %></td>

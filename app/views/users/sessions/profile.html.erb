@@ -1,12 +1,35 @@
-<div class="container">
+<div class="leaderboard-container">
 
   <%= image_tag @user.profile_pic %>
 
   <p><%= @user.email %>
   <p><%= @user.first_name %>
+
+
+  <table id="profile_ideas">
+    <thead>
+      <tr>
+        <th>My Movie Ideas</th>
+        <th>Likes</th>
+        <th>Dislikes</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @user.movie_ideas.each do |idea| %>
+      <tr>
+        <td><a href="/movie_ideas/<%= idea.id %>"><%= idea.synopsis %></a></td>
+        <td><%= idea.get_likes.size %></td>
+        <td><%= idea.get_dislikes.size %></td>
+
+      <% end %>
+      </tr>
+    </tbody>
+  </table>
+
   <p><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
-
-
-
-
 </div>
+
+
+
+

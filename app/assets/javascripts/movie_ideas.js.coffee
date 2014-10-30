@@ -3,8 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
-  $('#leaderboard').dataTable({"order": [[ 0, "desc" ]] })
-  console.log("Datatable");
+  $('#leaderboard').dataTable({"order": [[ 0, "desc" ]] });
   # // # $('.datatable').dataTable({
   # // #   # ajax: ...,
   # // #   # autoWidth: false,
@@ -16,3 +15,15 @@ $ ->
   # // #   # Check dataTables documentation to learn more about available options.
   # // #   # http://datatables.net/reference/option/pagingType
   # })
+
+  $('#profile_ideas').dataTable({"order": [[ 0, "desc" ]] });
+
+$ ->
+  text_max = 150
+  $("#textarea_feedback").html text_max + " characters remaining"
+  $("#textarea").keyup ->
+    text_length = $("#textarea").val().length
+    text_remaining = text_max - text_length
+    $("#textarea_feedback").html text_remaining + " characters remaining"
+
+

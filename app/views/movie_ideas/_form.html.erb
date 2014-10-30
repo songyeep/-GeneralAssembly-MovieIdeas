@@ -11,17 +11,23 @@
     </div>
   <% end %>
 
+
+
   <div class="synopsis-field">
     <%= f.label :synopsis %><br>
-    <%= f.text_field :synopsis %>
-      <p class="under-synopsis">150 Characters remaining</p>
+    <textarea id="textarea" rows="5", cols="20", max=length="150"><% f.text_field :synopsis %></textarea>
+    <div id="textarea_feedback"></div>
   </div>
   <div class="moreInfo-field">
     <%= f.label :more_info %><br>
     <%= f.text_field :more_info %>
+  </div>
+  <div class="user-field">
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
   <br>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

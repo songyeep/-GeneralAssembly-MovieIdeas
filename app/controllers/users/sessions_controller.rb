@@ -3,7 +3,7 @@ class Users::SessionsController < Devise::SessionsController
 
   def profile
     @user = User.find params[:id]
-
+    @movie_idea = MovieIdea.find params[:id]
   end
 
 
