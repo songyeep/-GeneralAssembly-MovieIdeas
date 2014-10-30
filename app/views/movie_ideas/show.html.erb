@@ -1,6 +1,8 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
 
+
+
   <p class="header"><strong>Synopsis</strong></p>
   <p class="details-synopsis"><%= @movie_idea.synopsis %></p>
 
@@ -8,13 +10,17 @@
   <p class="details-moreInfo"><%= @movie_idea.more_info %></p>
 
 
- <!--  <%= link_to 'Edit', edit_movie_idea_path(@movie_idea) %> | -->
+  <div class="btn-group">
+
+    <% if current_user.id == @movie_idea.user_id %>
+      <a href="/movie_ideas/<%= @movie_idea.id %>/edit" class="btn btn-default" id="yay_btn">Edit</a>
+    <% end %>
 
 
-
-  <form action="/" method="get">
-    <input name="id" value="<%= @movie_idea.id %>" type="hidden">
-    <button type="submit" class="btn btn-default" id="yay_btn">Back</button>
-  </form>
+    <form action="/" method="get">
+      <input name="id" value="<%= @movie_idea.id %>" type="hidden">
+      <button type="submit" class="btn btn-default" id="yay_btn">Back</button>
+    </form>
+  </div>
 
 </div>

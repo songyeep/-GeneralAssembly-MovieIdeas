@@ -19,6 +19,12 @@
       </div>
 
       <div class="btn-group">
+        <form action="/" method="get">
+          <button type="submit" class="btn btn-default" id="skip_btn">Skip</button>
+        </form>
+      </div>
+
+      <div class="btn-group">
         <form action="/movie_ideas/<%= @info.id %>/like" method="post">
           <button type="submit" class="btn btn-default" id="yay_btn">Yay</button>
         </form>

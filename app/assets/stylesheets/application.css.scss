@@ -15,7 +15,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: "Brown Fox";
-  /*background-color: #342B38;*/
+
 }
 
 p {
@@ -33,7 +33,7 @@ div.form-group {
 
 
 .container {
-  width: 600px;
+  width: 1000px;
 }
 
 .synopsis {
@@ -54,10 +54,11 @@ div.form-group {
   height: 50px;
 }
 
-#readMore_btn {
+#readMore_btn, #skip_btn {
   font-size: 30px;
   height: 50px;
 }
+
 
 
 /*Leaderboard css*/

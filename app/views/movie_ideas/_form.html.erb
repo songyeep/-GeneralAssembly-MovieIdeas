@@ -15,12 +15,12 @@
 
   <div class="synopsis-field">
     <%= f.label :synopsis %><br>
-    <textarea id="textarea" rows="5", cols="20", max=length="150"><% f.text_field :synopsis %></textarea>
+    <%= f.text_area :synopsis, {rows: "4", cols: "50", maxlength: "150"} %>
     <div id="textarea_feedback"></div>
   </div>
   <div class="moreInfo-field">
-    <%= f.label :more_info %><br>
-    <%= f.text_field :more_info %>
+    <% f.label :more_info %><br>
+    <%= f.text_area :more_info, {rows: "8", cols: "50", maxlength: "150"} %>
   </div>
   <div class="user-field">
     <%= f.hidden_field :user_id, value: current_user.id %>

@@ -25,5 +25,6 @@ $ ->
     text_length = $("#textarea").val().length
     text_remaining = text_max - text_length
     $("#textarea_feedback").html text_remaining + " characters remaining"
+    return
 
-
+  return
