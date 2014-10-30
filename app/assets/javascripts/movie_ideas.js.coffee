@@ -21,10 +21,7 @@ $ ->
 $ ->
   text_max = 150
   $("#textarea_feedback").html text_max + " characters remaining"
-  $("#textarea").keyup ->
-    text_length = $("#textarea").val().length
+  $("#movie_idea_synopsis").keyup ->
+    text_length = $("#movie_idea_synopsis").val().length
     text_remaining = text_max - text_length
     $("#textarea_feedback").html text_remaining + " characters remaining"
-    return
-
-  return

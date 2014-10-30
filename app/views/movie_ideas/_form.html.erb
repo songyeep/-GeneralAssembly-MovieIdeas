@@ -12,20 +12,25 @@
   <% end %>
 
 
-
   <div class="synopsis-field">
-    Synopsis<br>
-    <%= f.text_area :synopsis, {rows: "4", cols: "50", maxlength: "150"} %>
+    <p>Synopsis</p>
+    <%= f.text_area :synopsis, {rows: "4", cols: "80", maxlength: "150"} %>
     <div id="textarea_feedback"></div><br>
   </div>
+
+
   <div class="moreInfo-field">
-    Write more about it here:<br>
-    <%= f.text_area :more_info, {rows: "8", cols: "50", maxlength: "150"} %>
+    <p>Write more about it here:</p>
+    <%= f.text_area :more_info, {rows: "8", cols: "80"} %>
   </div>
+
+
   <div class="user-field">
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
   <br>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
