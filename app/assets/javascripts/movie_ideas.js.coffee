@@ -19,7 +19,7 @@ $ ->
   $('#profile_ideas').dataTable({"order": [[ 0, "desc" ]] });
 
 $ ->
-  text_max = 150
+  text_max = 200
   $("#textarea_feedback").html text_max + " characters remaining"
   $("#movie_idea_synopsis").keyup ->
     text_length = $("#movie_idea_synopsis").val().length

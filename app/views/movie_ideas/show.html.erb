@@ -1,7 +1,8 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
 
-
+  <p class="header"><strong>Created by</strong></p>
+  <p><a href="/users/<%= @movie_idea.user_id %>">Author</a></p>
 
   <p class="header"><strong>Synopsis</strong></p>
   <p class="details-synopsis"><%= @movie_idea.synopsis %></p>
@@ -12,15 +13,17 @@
 
   <div class="btn-group">
 
-    <% if current_user.id == @movie_idea.user_id %>
+    <% if user_signed_in? and current_user.id == @movie_idea.user_id %>
       <a href="/movie_ideas/<%= @movie_idea.id %>/edit" class="btn btn-default" id="yay_btn">Edit</a>
+    <%= link_to 'Destroy', @movie_idea, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default', :id => 'yay_btn' %>
     <% end %>
-
 
     <form action="/" method="get">
       <input name="id" value="<%= @movie_idea.id %>" type="hidden">
       <button type="submit" class="btn btn-default" id="yay_btn">Back</button>
     </form>
+
+
   </div>
 
 </div>

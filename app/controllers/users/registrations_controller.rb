@@ -12,17 +12,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  # def update
-  #   respond_to do |format|
-  #     if @user.update(user_params)
-  #       format.html { redirect_to @user, notice: "Your account has been updated successfully." }
-  #       format.json { render :show, status: :ok, location: @user }
-  #     else
-  #       format.html { render :edit }
-  #       format.json { render json: @user.error, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def update
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: "Your account has been updated successfully." }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.error, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # DELETE /resource
   # def destroy
@@ -38,11 +38,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # private
+  private
     # Never trust parameters from the scary internet, only allow the white list through.
-    # def user_params
-    #   params.require(:user).permit(:first_name, :profile_pic)
-    # end
+    def user_params
+      params.require(:user).permit(:first_name, :profile_pic)
+    end
 
   # protected
 

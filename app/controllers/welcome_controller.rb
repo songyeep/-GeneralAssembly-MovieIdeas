@@ -5,5 +5,7 @@ class WelcomeController < ApplicationController
     else
       @info = MovieIdea.all.sample
     end
+
+    @info = MovieIdea.new if @info.nil?
   end
 end
