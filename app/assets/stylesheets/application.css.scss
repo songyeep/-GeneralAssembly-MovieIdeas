@@ -61,16 +61,14 @@ div.form-group {
   width: 100%;
 }
 
-#nay_btn, #yay_btn {
-  font-size: 30px;
-  height: 50px;
+#nay_btn, #yay_btn, #readMore_btn, #skip_btn {
+  font-size: 20px;
 }
 
-#readMore_btn, #skip_btn {
-  font-size: 30px;
-  height: 50px;
+#yay_btn, #nay_btn {
+  color: white;
+  background-color: black;
 }
-
 
 .user_info {
   text-align: right;
@@ -132,11 +130,11 @@ p.header {
 
 /*Details/More Info css*/
 p.details-synopsis {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 p.details-moreInfo {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 img {
