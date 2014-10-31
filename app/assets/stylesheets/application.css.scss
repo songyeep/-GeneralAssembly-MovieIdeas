@@ -15,7 +15,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: "Arial";
-
 }
 
 
@@ -40,6 +39,11 @@ div.form-group {
 
 .navbar-header {
   height: 50px;
+}
+
+img#moth {
+  height: 100%;
+  width: 20%;
 }
 
 .container {
