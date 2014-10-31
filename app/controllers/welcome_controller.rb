@@ -8,4 +8,7 @@ class WelcomeController < ApplicationController
 
     @info = MovieIdea.new if @info.nil?
   end
+
+  def show
+  end
 end

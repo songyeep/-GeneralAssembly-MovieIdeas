@@ -4,8 +4,8 @@
 
 
 @font-face {
-  font-family: "Bebas";
-  src: url("/BebasNeue-webfont.ttf") format('truetype');
+  font-family: "Blue Highway";
+  src: url("/bluehighwaybd.ttf") format("truetype");
 }
 
 body {
@@ -14,12 +14,13 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Bebas";
+  font-family: "Arial";
 
 }
 
+
 p, a {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 nav, form {
@@ -27,14 +28,19 @@ nav, form {
 }
 
 a.navbar-brand {
-  font-size: 30px;
+  font-size: 50px;
+  font-family: "Blue Highway"
 }
+
 
 div.form-group {
   padding: 8px;
   width: 250px;
 }
 
+.navbar-header {
+  height: 50px;
+}
 
 .container {
   width: 1000px;
@@ -47,7 +53,7 @@ div.form-group {
   padding-bottom: 15%;
   padding-left: 10%;
   padding-right: 10%;
-  height: 400px;
+  height: 500px;
 
 }
 
@@ -96,6 +102,10 @@ th, td {
 
 p.header {
   color: #8B0000;
+}
+
+#info-synopsis {
+  font-size: 35px;
 }
 
 
