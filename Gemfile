@@ -7,7 +7,7 @@ gem 'rails', '4.1.6'
 gem 'pg'
 
 
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 # Uploader
 gem 'carrierwave'
