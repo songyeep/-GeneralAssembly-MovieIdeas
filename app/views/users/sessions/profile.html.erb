@@ -1,19 +1,18 @@
 <div class="container">
-
-  <div class="user_info col-md-3">
+  <div class="user_info">
     <%= image_tag @user.profile_pic %>
-    <p><%= @user.email %>
-    <p><%= @user.first_name %>
-    <p><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+    <p><%= @user.email %></p>
+    <p><%= @user.first_name %></p>
+    <p><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></p>
 
 
     <% if current_user.id != @user.id %>
-      <p><button type="submit" class="btn btn-default" id="yay_btn">Follow</button>
+      <p><button type="submit" class="btn btn-default" id="yay_btn">Follow</button></p>
     <% end %>
   </div>
 
 
-  <div class="profile_ideas col-md-9">
+  <div class="profile_ideas">
     <table id="profile_ideas">
       <thead>
         <tr>
@@ -33,5 +32,4 @@
       </tbody>
     </table>
   </div>
-
 </div>
