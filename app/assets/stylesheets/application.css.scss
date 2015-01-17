@@ -13,7 +13,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Arial";
+  margin-top: 60px;
+  font-size: 14px;
+  font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
+  background-color: #E5E9ED;
 }
 
 
@@ -161,16 +164,6 @@ form.back-btn {
 }
 
 
-
-
-
-
-body {
-  margin-top: 60px;
-  font-size: 14px;
-  font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
-  background-color: #E5E9ED;
-}
 /* entire container, keeps perspective */
 .card-container {
     -webkit-perspective: 800px;
