@@ -24,8 +24,12 @@ body {
 }
 
 
-p, a {
+p, a, form {
   font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -35,10 +39,6 @@ nav {
   font-family: 'PT Sans', sans-serif;
 }
 
-form {
-  font-size: 20px;
-  font-family: 'PT Sans', sans-serif;
-}
 
 a.navbar-brand {
   font-size: 50px;
