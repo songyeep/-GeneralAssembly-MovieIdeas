@@ -132,13 +132,13 @@ p.header {
 #movie_idea_synopsis {
   background-color: rgba(227,227,227,0.5);
   width: 500px;
-  /*height: 100px;*/
+
 }
 
 #movie_idea_more_info {
   background-color: rgba(227,227,227,0.5);
   width: 500px;
-/*  height: 300px;*/
+
 }
 
 
@@ -420,5 +420,60 @@ form.back-btn {
 
 
 
+/* ---------- LOGIN-FORM ---------- */
 
+.login-container {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#login-form {
+  width: 300px;
+}
+
+#login-form h3 {
+  background-color: #282830;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+
+#login-form fieldset {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 20px;
+  position: relative;
+}
+
+
+#login-form fieldset:before {
+  background-color: #fff;
+  content: "";
+  height: 8px;
+  left: 50%;
+  margin: -4px 0px 0 -4px;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+
+
+input {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 7px;
+  background-color: #fff;
+}
 

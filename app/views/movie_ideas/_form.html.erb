@@ -1,38 +1,40 @@
-<%= form_for(@movie_idea) do |f| %>
-  <% if @movie_idea.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@movie_idea.errors.count, "error") %> prohibited this movie_idea from being saved:</h2>
 
-      <ul>
-      <% @movie_idea.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="login-container">
+  <%= form_for(@movie_idea) do |f| %>
+    <% if @movie_idea.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@movie_idea.errors.count, "error") %> prohibited this movie_idea from being saved:</h2>
+
+        <ul>
+        <% @movie_idea.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <div class="synopsis-field" id="movie_idea_synopsis">
+      <div id="login-form"><h3 style="width:500px">Synopsis</h3>
+      <%= f.text_area :synopsis, {rows: "4", cols: "80", maxlength: "200"} %>
+      <div id="textarea_feedback"></div><br>
+    </div>
+
+
+    <div class="moreInfo-field" id="movie_idea_more_info">
+      <div id="login-form"><h3 style="width:500px">Write more about it here:</h3></div>
+      <%= f.text_area :more_info, {rows: "8", cols: "80", maxlength: "500"} %>
+    </div>
+
+
+    <div class="user-field">
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    </div>
+    <br>
+
+
+    <div class="actions">
+      <%= f.submit value: "Submit" %>
     </div>
   <% end %>
-
-
-  <div class="synopsis-field" id="movie_idea_synopsis">
-    <p>Synopsis</p>
-    <%= f.text_area :synopsis, {rows: "4", cols: "80", maxlength: "200"} %>
-    <div id="textarea_feedback"></div><br>
-  </div>
-
-
-  <div class="moreInfo-field" id="movie_idea_more_info">
-    <p>Write more about it here:</p>
-    <%= f.text_area :more_info, {rows: "8", cols: "80", maxlength: "500"} %>
-  </div>
-
-
-  <div class="user-field">
-    <%= f.hidden_field :user_id, value: current_user.id %>
-  </div>
-  <br>
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
+</div>
