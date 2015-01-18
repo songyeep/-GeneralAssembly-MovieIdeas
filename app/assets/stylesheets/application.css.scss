@@ -21,6 +21,7 @@ body {
   font-size: 14px;
   font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
   background-image: url(http://i.imgur.com/wJm4yMq.jpg);
+  background-size: 100%;
 }
 
 
@@ -415,6 +416,7 @@ form.back-btn {
   overflow:hidden;
   -webkit-animation: type 5s steps(50, end);
   animation: type 5s steps(50, end);
+  font-family: 'PT Sans', sans-serif;
 }
 
 @keyframes type{
