@@ -12,16 +12,16 @@
   <% end %>
 
 
-  <div class="synopsis-field">
+  <div class="synopsis-field" id="movie_idea_synopsis">
     <p>Synopsis</p>
     <%= f.text_area :synopsis, {rows: "4", cols: "80", maxlength: "200"} %>
     <div id="textarea_feedback"></div><br>
   </div>
 
 
-  <div class="moreInfo-field">
+  <div class="moreInfo-field" id="movie_idea_more_info">
     <p>Write more about it here:</p>
-    <%= f.text_area :more_info, {rows: "8", cols: "80"} %>
+    <%= f.text_area :more_info, {rows: "8", cols: "80", maxlength: "500"} %>
   </div>
 
 
