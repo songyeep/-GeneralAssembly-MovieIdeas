@@ -153,12 +153,12 @@ p.header {
 /*Details/More Info css*/
 p.details-synopsis {
   font-size: 20px;
-  background-color: rgba(227,227,227,0.8);
+  // background-color: rgba(227,227,227,0.8);
 }
 
 p.details-moreInfo {
   font-size: 20px;
-  background-color: rgba(227,227,227,0.8);
+  // background-color: rgba(227,227,227,0.8);
 }
 
 img {
@@ -491,6 +491,10 @@ input {
 }
 
 table {
+  background-color: rgba(227,227,227,0.8);
+}
+
+#disqus_thread {
   background-color: rgba(227,227,227,0.8);
 }
 
