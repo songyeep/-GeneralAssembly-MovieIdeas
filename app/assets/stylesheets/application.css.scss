@@ -8,6 +8,10 @@
   src: url("/bluehighwaybd.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'PT Sans', sans-serif;
+}
+
 body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -22,15 +26,18 @@ body {
 
 p, a {
   font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 nav {
   font-size: 20px;
   margin-top: -60px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 form {
   font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 a.navbar-brand {
@@ -91,7 +98,6 @@ img#scimoth {
 .leaderboard-container {
   margin-left: 5%;
   margin-right: 5%;
-  font-size: 25px;
 }
 
 td, th {
