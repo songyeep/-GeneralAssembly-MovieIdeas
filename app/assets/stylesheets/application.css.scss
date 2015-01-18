@@ -20,13 +20,14 @@ body {
   margin-top: 60px;
   font-size: 14px;
   font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
-  background-color: #E5E9ED;
+  background-image: url(http://i.imgur.com/wJm4yMq.jpg);
 }
 
 
 p, a, form {
   font-size: 20px;
   font-family: 'PT Sans', sans-serif;
+  color: black;
 }
 
 h1 {
@@ -35,14 +36,15 @@ h1 {
 
 nav {
   font-size: 20px;
-  margin-top: -60px;
+  margin-top: -40px;
   font-family: 'PT Sans', sans-serif;
 }
 
 
 a.navbar-brand {
-  font-size: 50px;
-  font-family: "Blue Highway"
+  font-size: 90px;
+  font-family: "Blue Highway";
+  color: black;
 }
 
 
@@ -53,6 +55,10 @@ div.form-group {
 
 .navbar-header {
   height: 50px;
+}
+
+.navbar-link:hover{
+  color: #008080;
 }
 
 img#moth {
@@ -66,14 +72,14 @@ img#scimoth {
 
 }
 
-
 .card-top-container {
   width: 600px;
 }
 
 .synopsis {
-  background-color: rgba(227,227,227,0.5);
-  padding-top: 15%;
+  background-image: url(http://i668.photobucket.com/albums/vv44/GOULDandy1/FilmStrip2A.jpg);
+  background-size: 100% 100%;
+  padding-top: 23%;
   padding-bottom: 15%;
   padding-left: 10%;
   padding-right: 10%;
@@ -86,7 +92,7 @@ img#scimoth {
 
 
 .user_info {
-  text-align: left;
+  text-align: center;
 }
 
 .profile_ideas {
@@ -146,10 +152,12 @@ p.header {
 /*Details/More Info css*/
 p.details-synopsis {
   font-size: 20px;
+  background-color: rgba(227,227,227,0.8);
 }
 
 p.details-moreInfo {
   font-size: 20px;
+  background-color: rgba(227,227,227,0.8);
 }
 
 img {
@@ -401,13 +409,12 @@ form.back-btn {
 }
 
 
-.css-typing
-{
-    width: 30em;
-    white-space:nowrap;
-    overflow:hidden;
-    -webkit-animation: type 5s steps(50, end);
-    animation: type 5s steps(50, end);
+.css-typing {
+  width: 30em;
+  white-space:nowrap;
+  overflow:hidden;
+  -webkit-animation: type 5s steps(50, end);
+  animation: type 5s steps(50, end);
 }
 
 @keyframes type{
@@ -432,7 +439,7 @@ form.back-btn {
 }
 
 #login-form {
-  width: 300px;
+  width: 500px;
 }
 
 #login-form h3 {
@@ -444,6 +451,10 @@ form.back-btn {
   text-align: center;
   text-transform: uppercase;
 
+}
+
+.input-form {
+  width: 460px;
 }
 
 #login-form fieldset {
@@ -475,5 +486,9 @@ input {
   padding: 8px;
   border-radius: 7px;
   background-color: #fff;
+}
+
+table {
+  background-color: rgba(227,227,227,0.8);
 }
 
