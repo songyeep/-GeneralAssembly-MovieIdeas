@@ -14,14 +14,14 @@
     <% end %>
 
 
-    <div class="synopsis-field" id="movie_idea_synopsis">
+    <div class="synopsis-field">
       <div id="login-form"><h3 style="width:500px">Synopsis</h3>
-      <%= f.text_area :synopsis, {rows: "4", cols: "80", maxlength: "200"} %>
-      <div id="textarea_feedback"></div><br>
+        <%= f.text_area :synopsis, {rows: "4", cols: "80", maxlength: "200"} %>
+      <div class="countdown"></div><br>
     </div>
 
 
-    <div class="moreInfo-field" id="movie_idea_more_info">
+    <div class="moreInfo-field">
       <div id="login-form"><h3 style="width:500px">Write more about it here:</h3></div>
       <%= f.text_area :more_info, {rows: "8", cols: "80", maxlength: "500"} %>
     </div>
