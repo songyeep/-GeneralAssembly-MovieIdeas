@@ -21,7 +21,7 @@ $ ->
 
 $ ->
   maxLength = 200
-  $("textarea").keyup ->
+  $("#movie_idea_synopsis").keyup ->
     length = $(this).val().length
     length = maxLength - length
     $("#chars").text length
