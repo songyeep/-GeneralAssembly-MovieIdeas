@@ -1,23 +1,27 @@
 <div class="container">
+
   <div class="btn-group">
-    <a href="/users/<%= @movie_idea.user_id %>" class="btn btn-default" id="yay_btn">Creator Profile</a>
+    <a href="/users/<%= @movie_idea.user_id %>" class="btn btn-default">Creator Profile</a>
 
     <% if user_signed_in? and current_user.id == @movie_idea.user_id %>
-      <a href="/movie_ideas/<%= @movie_idea.id %>/edit" class="btn btn-default" id="yay_btn">Edit</a>
-    <%= link_to 'Destroy', @movie_idea, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default', :id => 'yay_btn' %>
+      <a href="/movie_ideas/<%= @movie_idea.id %>/edit" class="btn btn-default">Edit</a>
+    <%= link_to 'Destroy', @movie_idea, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-default' %>
     <% end %>
 
-    <form action="/" method="get">
-      <input name="id" value="<%= @movie_idea.id %>" type="hidden">
-      <button type="submit" class="btn btn-default" id="yay_btn">Back</button>
-    </form>
   </div>
 
+  <br><br>
   <div class="col-md-2">
-    <p class="header"><strong>Yays</strong></p>
-    <p><%= @movie_idea.get_likes.size %>
-    <p class="header"><strong>Nays</strong></p>
-    <p><%= @movie_idea.get_dislikes.size %>
+    <center>
+      <form action="/movie_ideas/<%= @movie.id %>/like" method="post">
+        <button class="btn btn-default"><i type="submit" class="fa fa-thumbs-o-up fa-2x"></i></button>
+      </form>
+        <p><%= @movie_idea.get_likes.size %>
+      <form action="/movie_ideas/<%= @movie.id %>/dislike" method="post">
+        <button class="btn btn-default"><i type="submit" class="fa fa-thumbs-o-down fa-2x"></i></button>
+      </form>
+        <p><%= @movie_idea.get_dislikes.size %>
+    </center>
   </div>
   <div class="col-md-10">
     <p class="header"><strong>Synopsis</strong></p>

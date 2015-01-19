@@ -27,6 +27,7 @@ class MovieIdeasController < ApplicationController
   # GET /movie_ideas/1
   # GET /movie_ideas/1.json
   def show
+    @movie = MovieIdea.find params[:id]
   end
 
   # GET /movie_ideas/new

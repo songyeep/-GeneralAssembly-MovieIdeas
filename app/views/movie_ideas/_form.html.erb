@@ -1,5 +1,5 @@
 
-<div class="login-container">
+
   <%= form_for(@movie_idea) do |f| %>
     <% if @movie_idea.errors.any? %>
       <div id="error_explanation">
@@ -15,15 +15,15 @@
 
 
     <div class="synopsis-field">
-      <div id="login-form"><h3 style="width:500px">Synopsis</h3>
-        <%= f.text_area :synopsis, {rows: "4", cols: "80", maxlength: "200"} %>
-      <span id="chars">200</span> characters remaining<br>
+      <div id="login-form"><h3 style="width:700px">Synopsis</h3></div>
+      <%= f.text_area :synopsis, {rows: "4", cols: "150", maxlength: "200"} %>
+      <br><span id="chars">200</span> characters remaining<br>
     </div>
 
 
     <div class="moreInfo-field">
-      <div id="login-form"><h3 style="width:500px">Write more about it here:</h3></div>
-      <%= f.text_area :more_info, {rows: "8", cols: "80"} %>
+      <div id="login-form"><h3 style="width:700px">Write more about it here:</h3></div>
+      <%= f.text_area :more_info, {rows: "8", cols: "150", maxlength: "450"} %>
     </div>
 
 
@@ -37,4 +37,3 @@
       <%= f.submit value: "Submit" %>
     </div>
   <% end %>
-</div>

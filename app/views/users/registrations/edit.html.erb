@@ -1,35 +1,38 @@
 <div class="container">
 <p>Edit <%= resource_name.to_s.humanize %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :patch }) do |f| %>
-  <%= devise_error_messages! %>
+
+<div class="col-md-6">
+
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :patch }) do |f| %>
+    <%= devise_error_messages! %>
 
 
 
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+    <div><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
 
-  <br>
-  <div><%= f.label :first_name %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.text_field :first_name, autocomplete: "off" %></div>
+    <br>
+    <div><%= f.label :first_name %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.text_field :first_name, autocomplete: "off" %></div>
 
-  <br>
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+    <br>
+    <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
 
-  <br>
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+    <br>
+    <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
+</div>
 
-
-
-
+<div class="col-md-6">
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
@@ -48,5 +51,5 @@
     <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
     <%= link_to "Back", :back %>
-
+</div>
 </div>
