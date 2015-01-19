@@ -17,3 +17,12 @@ $ ->
   # })
 
   $('#profile_ideas').dataTable({"order": [[ 0, "desc" ]] });
+
+
+$ ->
+  maxLength = 200
+  $("textarea").keyup ->
+    length = $(this).val().length
+    length = maxLength - length
+    $("#chars").text length
+  return
